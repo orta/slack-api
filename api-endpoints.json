@@ -1649,9 +1649,13 @@
           "required": true,
           "description": "Authentication token (Requires scope: read)"
         },
-        "user ": {
+        "user": {
           "required": false,
           "description": "User to retrieve profile info for"
+        },
+        "include_labels": {
+          "required": false,
+          "description": "Include labels for each ID in custom profile fields, note: heavily rate limited."
         }
       },
       "errors": {
