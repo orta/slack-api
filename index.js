@@ -160,4 +160,5 @@ function collectRequiredArgs(configuredArgs) {
 }
 
 api.promisify = promisify;
+api.apiMethod = apiMethod;
 module.exports = api;
