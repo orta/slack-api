@@ -1526,6 +1526,28 @@
       }
     }
   },
+  "team": {
+     "profile.get": {
+      "url": "https://slack.com/api/team.profile.get",
+      "description": "This method is used to get the profile field definitions for this team.",
+      "help": "https://api.slack.com/methods/team.profile.get",
+      "arguments": {
+        "token": {
+          "required": true,
+          "description": "Authentication token (Requires scope: read)"
+        },
+        "visibility": {
+          "required": false,
+          "description": "Filter by visibility"
+        }
+      },
+      "errors": {
+        "not_authed'": "No authentication token provided.",
+        "invalid_auth'": "Invalid authentication token.",
+        "account_inactive'": "Authentication token is for a deleted user or team."
+      }
+    }
+  },
   "users": {
     "getPresence": {
       "url": "https://slack.com/api/users.getPresence",
