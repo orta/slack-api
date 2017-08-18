@@ -1662,7 +1662,7 @@
         "account_inactive'": "Authentication token is for a deleted user or team."
       }
     },
-     "profile.get": {
+    "profile.get": {
       "url": "https://slack.com/api/users.profile.get",
       "description": "This method is used to get the profile information for a user.",
       "help": "https://api.slack.com/methods/users.profile.get",
@@ -1674,6 +1674,31 @@
         "user": {
           "required": false,
           "description": "User to retrieve profile info for"
+        },
+        "include_labels": {
+          "required": false,
+          "description": "Include labels for each ID in custom profile fields, note: heavily rate limited."
+        }
+      },
+      "errors": {
+        "user_not_found": "Value passed for user was invalid",
+        "not_authed'": "No authentication token provided.",
+        "invalid_auth'": "Invalid authentication token.",
+        "account_inactive'": "Authentication token is for a deleted user or team."
+      }
+    },
+    "profile.set": {
+      "url": "https://slack.com/api/users.profile.set",
+      "description": "This method is used to get the profile information for a user.",
+      "help": "https://api.slack.com/methods/users.profile.set",
+      "arguments": {
+        "token": {
+          "required": true,
+          "description": "Authentication token (Requires scope: read)"
+        },
+        "user": {
+          "required": false,
+          "description": "User to set profile info for"
         },
         "include_labels": {
           "required": false,
